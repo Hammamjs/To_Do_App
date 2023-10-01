@@ -1,38 +1,107 @@
 .App {
-  text-align: center;
+  transition: 0.3s ease-in-out;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Global classes*/
+.container {
+  width: 100%;
+  height: calc(100vh - 97px);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.progress.fw {
+  width: 100% !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.open-side-bar {
+  margin-left: 300px;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  transition: 0.5s ease-in-out;
+  position: relative;
+  overflow: hidden;
 }
 
-@keyframes App-logo-spin {
+button .loader {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  border-radius: 50%;
+  background-color: transparent;
+  margin-right: 10px;
+  border: 3px solid #3f3f3f;
+  border-top: 3px solid #3498db;
+  animation: spin 2s infinite linear;
+  transition: 0.5s;
+}
+
+input {
+  outline: none;
+  border: none;
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff47;
+  width: 0;
+  height: 0;
+}
+
+button:hover::before {
+  animation: blowing 0.8s forwards linear;
+}
+
+a {
+  transition: 0.5s ease-in-out;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: rgb(65, 65, 199);
+}
+
+.input-holder {
+  position: relative;
+  width: 200px;
+  margin: 5px auto;
+}
+
+.input-holder .progress {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: #009688;
+  width: 0;
+  height: 3px;
+  border-radius: 3px;
+  transition: 0.5s ease-in-out;
+}
+
+/* css animation*/
+@keyframes blowing {
   from {
-    transform: rotate(0deg);
+    width: 0;
+    height: 0%;
   }
   to {
+    width: 1000%;
+    height: 1000%;
+    opacity: 0;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+    height: 1px;
+  }
+  from {
     transform: rotate(360deg);
+    height: 15px;
   }
 }

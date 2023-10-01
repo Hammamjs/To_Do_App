@@ -1,0 +1,12 @@
+.edit-task input {
+  padding: 3px 10px;
+  border-radius: 3px;
+}
+
+.edit-task textarea {
+  resize: none;
+  height: 150px;
+  padding: 5px;
+  border: none;
+  outline: none;
+}

@@ -1,0 +1,44 @@
+.signin {
+  height: calc(100vh - 80px);
+  width: 100%;
+  max-width: 100%;
+}
+
+.signin-box {
+  width: 300px;
+  height: 300px;
+}
+
+.signin-box h5 {
+  font-weight: bold;
+}
+
+.signin-box h5 span {
+  color: #009688;
+}
+
+.signin .signin-box input {
+  display: block;
+  margin: 20px auto;
+  font-size: 15px;
+  width: 200px;
+  max-width: 100%;
+  padding: 5px 10px;
+  border-radius: 6px;
+  outline: none;
+  border: none;
+}
+
+.signin .btn {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+button.disabled {
+  cursor: not-allowed;
+}
+
+.signin a {
+  display: block;
+  font-size: 13px;
+}
