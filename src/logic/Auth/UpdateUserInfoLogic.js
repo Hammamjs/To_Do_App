@@ -40,6 +40,9 @@ export const UpdateUserInfoLogic = () => {
             if (err.response.status === 404)
               toast.error(err.response.data.errors[0].msg);
           });
+        setPassword('');
+        setPasswordConfirm('');
+        setNewPassword('');
       }
     } else if (name.trim() !== '' && email.trim() !== '') {
       axios
